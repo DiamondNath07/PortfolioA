@@ -1,0 +1,235 @@
+/* globals */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Francois+One&family=Gulzar&family=Lato&family=Merriweather+Sans&family=Montserrat&family=Noto+Sans+JP:wght@700&family=Noto+Sans:wght@600;700&family=Poppins:wght@200;300&family=Roboto+Condensed&family=Short+Stack&family=Tiro+Kannada&family=Titillium+Web:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Francois+One&family=Gulzar&family=Lato&family=Merriweather+Sans&family=Montserrat&family=Noto+Sans+JP:wght@700&family=Noto+Sans:wght@600;700&family=Noto+Serif&family=Poppins:wght@200;300&family=Roboto+Condensed&family=Short+Stack&family=Tiro+Kannada&family=Titillium+Web:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  /* position: fixed; */
+  height: clamp(50px, 600vw, 60px);
+  background-color: #3e3c3c;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.navbar h1 {
+  margin-top: 20px;
+  color: #fff;
+  font-family: "Montserrat" sans-serif;
+  font-size: clamp(12px, 50vw, 24px);
+  line-height: 24px;
+  /* position: relative;
+  overflow: hidden; */
+}
+
+/* .navbar h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color: #3e3c3c;
+  border-left: 10px solid #3e3c3c;
+  animation: typing 1.5s steps(10) infinite;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+} */
+
+.menu-icon {
+  margin-top: 5px;
+  color: #fff;
+  visibility: hidden;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .menu-icon {
+    visibility: visible;
+  }
+
+  .menu-icon i {
+    margin-top: 10px;
+  }
+
+  .nav-menu {
+    display: none;
+    visibility: none;
+  }
+
+  .navbar {
+    padding: 0 10px 0 10px;
+  }
+
+  .right-nav img {
+    display: none;
+  }
+
+  .left-nav {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .icon-tags {
+    display: flex;
+    /* transform: scale(1); */
+    transform: translateY(800%);
+    /* margin-left: 30px; */
+  }
+
+  .particulars h1 {
+    text-align: start;
+  }
+}
+
+/* For Tablet */
+@media (max-width: 1200px) {
+  .right-nav img {
+    display: none;
+  }
+}
+
+.show-sidebar {
+  transform: translateX(0);
+}
+
+.nav-menu li {
+  list-style: none;
+  padding: 0 10px;
+  margin-top: 20px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+.nav-menu li i {
+  margin-top: 2px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.nav-menu li a:hover {
+  background-color: #f4f4f4;
+  color: #000;
+  padding: 10px;
+  transition: background 0.5s ease-in-out;
+}
+
+.nav-menu li i:hover {
+  position: static;
+  color: green;
+  transition: 0.5s ease-in-out;
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+main {
+  background-color: #1c1a19;
+  z-index: 1;
+  height: 500px;
+}
+
+.main-container {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.left-nav {
+  display: flex;
+  justify-content: space-between;
+  /* width: 50%; */
+  margin-top: 40px;
+}
+
+.icon-tags li {
+  list-style: none;
+}
+
+.icon-tags li i {
+  font-size: clamp(12px, 8vw, 24px);
+  color: #1e4a71;
+  margin-top: clamp(10px, 3vw, 20px);
+  margin-right: 30px;
+}
+
+.icon-tags li i:hover {
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  transform: ;
+}
+
+.particulars {
+  position: relative;
+}
+
+.about-me {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.particulars h1 {
+  font-size: clamp(12px, 8vw, 24px);
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.particulars h2,
+.particulars h3 {
+  font-size: clamp(8px, 8vw, 16px);
+  line-height: 28px;
+  margin-top: 15px;
+  text-align: justify;
+  color: #fff;
+  text-transform: capitalize;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.right-nav {
+  position: absolute;
+  transform: translate(185%);
+  margin-top: 0;
+}
+
+.right-nav img {
+  width: clamp(200px, 30vw, 500px);
+  /* size: 10px; */
+  /* right: 0; */
+  margin-left: 40px;
+
+  transform: scaleX(-1);
+}
+
+section {
+  /* height: px; */
+  background-color: #f4f4f4;
+}
