@@ -3,6 +3,17 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Francois+One&family=Gulzar&family=Lato&family=Merriweather+Sans&family=Montserrat&family=Noto+Sans+JP:wght@700&family=Noto+Sans:wght@600;700&family=Noto+Serif&family=Poppins:wght@200;300&family=Roboto+Condensed&family=Short+Stack&family=Tiro+Kannada&family=Titillium+Web:wght@300&display=swap");
 
+:root {
+  /* fonts for Headings */
+  --nursery: "Noto Sans", sans-serif;
+  --font2: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+
+  /* color codes */
+  --blue: #1e4a71;
+  --harsh: #f4f4f4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +24,7 @@ nav {
   /* position: fixed; */
   height: clamp(50px, 600vw, 60px);
   background-color: #3e3c3c;
+  /* position: absolute; */
 }
 
 .navbar {
@@ -98,6 +110,52 @@ nav {
 
   .particulars h1 {
     text-align: start;
+    /* margin-top: 40px;
+    text-decoration: underline; */
+  }
+
+  .title {
+    text-align: start;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .project-container {
+    display: block;
+    flex-direction: column;
+    width: 90%;
+    place-items: center;
+    text-align: center;
+  }
+
+  .visual {
+    display: none;
+    padding-left: 0px;
+    padding-top: 40px;
+  }
+
+  .visual-frame {
+    /* display: hidden; */
+    display: none;
+
+    width: 0;
+    height: auto;
+  }
+
+  .visual img {
+    /* width: 30px; */
+    width: 50%;
+  }
+
+  .about {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .about-container button {
+    display: none;
   }
 }
 
@@ -182,7 +240,7 @@ main {
   color: #fff;
   transition: 0.3s ease-in-out;
   cursor: pointer;
-  transform: ;
+  transition: 0.5s;
 }
 
 .particulars {
@@ -200,7 +258,7 @@ main {
   text-align: center;
   color: #fff;
   text-transform: capitalize;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--nursery);
 }
 
 .particulars h2,
@@ -230,6 +288,160 @@ main {
 }
 
 section {
-  /* height: px; */
-  background-color: #f4f4f4;
+  height: 500px;
+  background-color: var(--harsh);
+}
+
+.heading {
+  padding-top: 30px;
+  padding-left: 40px;
+  /* display: flex; */
+  /* flex-direction: row; */
+}
+
+.title h2 {
+  margin-top: 30px;
+  margin-left: 60px;
+  color: #000;
+  font-family: var(--nursery);
+  font-size: clamp(12px, 50vw, 24px);
+  line-height: 24px;
+  color: var(--blue);
+}
+
+hr {
+  width: 50%;
+  margin-left: 320px;
+  transform: translateY(-500%);
+}
+
+.project-container {
+  display: flex;
+  /* justify-content: center; */
+}
+.visual {
+  padding-left: 100px;
+  padding-top: 40px;
+}
+
+.visual-frame {
+  width: clamp(250px, 50vw, 505px);
+  height: auto;
+  background-color: #000;
+}
+
+.description {
+  margin-top: 60px;
+  margin-left: 50px;
+  width: clamp(50px, 50vw, 600px);
+}
+
+.description h1 {
+  font-family: var(--nursery);
+  font-size: 32px;
+  text-align: start;
+  text-transform: capitalize;
+  text-shadow: 5px 5px 5px #1e4a71bd;
+}
+
+.description p {
+  font-family: var(--font2);
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-top: 10px;
+  padding: 5px;
+  /* text-align: justify; */
+  /* font-size: 20px; */
+}
+
+.btn button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: 1px solid #3e3c3cad;
+  border-radius: 5px;
+  /* border: none; */
+}
+
+.btn button a {
+  text-decoration: none;
+  color: #000;
+}
+
+.btn button:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.btn button a:hover {
+  color: #fff;
+}
+
+.about {
+  height: 500px;
+  background-color: var(--harsh);
+}
+
+.about1 {
+  display: flex;
+}
+
+.about-container {
+  width: 80%;
+}
+
+.about-container h1 {
+  padding-top: 30px;
+  margin-left: 100px;
+  font-family: var(--nursery);
+  color: #184943;
+  text-shadow: 5px 5px 5px #184943;
+  animation: bounce 5s ease infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.about-container p {
+  margin-left: 100px;
+  /* margin-top: 10px; */
+  font-size: clap(16px, 8vw, 28px);
+  /* padding-top: 20px; */
+  line-height: 24px;
+
+  font-weight: 600;
+  text-align: justify;
+  font-family: var(--font2);
+  padding: 5px;
+  color: var(--blue);
+}
+
+.about-container p span {
+  color: #000;
+}
+
+.about-container button {
+  margin-left: 250px;
+  margin-top: 5px;
+  padding: 10px 20px;
+  border: 1px solid #686666;
+  border-radius: 5px;
+}
+
+/* .my-image {
+  text-align: end;
+} */
+
+.about1 img {
+  width: 70%;
+  transform: scaleX(-1);
 }
